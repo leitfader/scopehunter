@@ -1,4 +1,5 @@
 # scopehunter
+![banner](./banner.gif)
 
 scopehunter is a Python-based command-line tool that automates a full web reconnaissance workflow. It handles scope collection, expansion, host probing, URL harvesting, and vulnerability scanning in a single guided process.
 The tool is designed to reduce repetitive setup work and keep reconnaissance structured and consistent for bug bounty or pentests.
