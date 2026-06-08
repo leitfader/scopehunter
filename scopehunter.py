@@ -59,7 +59,7 @@ def sub_httpx():
         os.system('subfinder -dL wildcards.txt -all | anew domains.txt')
     # Then run httpx on domains.txt as before
     os.system('cat domains.txt | httpx | anew hosts.txt')
-    os.system('cat domains.txt | httpx -wc -sc -cl -ct -web-server -asn -o detailed-hosts.txt -p 8080,8000,8443,443,80,8008,3000,5000,9090,900,7070,9200,15672,9000 -threads 75 -location -hae 96c8e9cf-4d77-45f5-bc3c-dd5d14919358')
+    os.system('cat domains.txt | httpx -wc -sc -cl -ct -web-server -asn -o detailed-hosts.txt -p 8080,8000,8443,443,80,8008,3000,5000,9090,900,7070,9200,15672,9000 -threads 75 -location')
 
 # Saving hosts in Acunetix format for easy import as i usually use it.
 def acu():
