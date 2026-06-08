@@ -26,33 +26,6 @@ for line in banner.splitlines():
     sys.stdout.flush()
     time.sleep(0.02)
 
-
-process = subprocess.Popen(
-    ["sudo", "update-all"],
-    stdout=subprocess.PIPE,
-    stderr=subprocess.STDOUT,
-    universal_newlines=True,
-    bufsize=1
-)
-
-spinner = ["⠋","⠙","⠹","⠸","⠼","⠴","⠦","⠧","⠇","⠏"]
-i = 0
-print("Updating… summoning the background Oompa-Loompas...\n")
-
-while True:
-    # Non-blocking read of a single line
-    line = process.stdout.readline()
-    if not line and process.poll() is not None:
-        break
-
-    sys.stdout.write(f"\r{spinner[i % len(spinner)]} Doing system wizardry… ")
-    sys.stdout.flush()
-    i += 1
-    time.sleep(0.10)
-code = process.wait()
-print("\nSystem is up to date!")
-time.sleep(2)
-os.system('clear')
 # Ask user if domains will come from files or manually
 file_mode = input("Load domains from file? (y/n): ").strip().lower()
 
